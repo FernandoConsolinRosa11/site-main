@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+:root{
+   --darkgray-color: #333;
+   --light-color:#FFFFFF ;
+   --Dark-color:#030303;
+   --red-color:#F40100;
+   
+   --font-padrao:"Aboreto", system-ui;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   background-color: var(--light-color);
+   font-family: var(--font-padrao);
+}
+
+p{
+    text-align: justify;
+}
+header{
+    background-color: var(--light-color);
+    width: 100%;
+    height: 85px;
+}
+header nav{
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--light-color);
+    
+}
+header nav a, a{
+    color: var(--light-color);
+    margin: 0 15px;
+    transition: 0.3s all ease;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight:bold ;
+}
+
+
+h1{
+    text-align: center;
+}
+main{
+    display: block;
+
+    section{
+        padding: 50px 0;  
+    }
+
+    p{
+        font-weight: bold;
+    }
+}
+
+
+footer{
+    position: relative;
+    height: auto;
+    color: white;
+    width: 100%;
+    background-color: var(--Dark-color);
+    text-align: center;
+    p{
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.6em;
+        padding-top: 10px;
+    }
+
+    img{
+        min-width: 100px;
+        max-width: 100px;
+        border-radius: 50px;
+    }
+
+    a{
+      text-decoration: underline;
+    }
+    
+   
+}
+.redes{
+    display: block;
+    margin: 5px;
+}
+
+.redes a{
+    transition: 0.3s all;
+}
+
+.redes a:hover{
+    color: rgb(255, 0, 55);
+}
+
+
+
+.sobre{
+    iframe{
+        width: 100%;
+        height: 300px;
+        margin: 50px 0;
+    }
+    p{
+        font-size: 18px;
+     }
+}
+
+.banner{
+    text-align: center;
+    background-size: cover;
+    display: none;
+    img{
+        width: 100%;
+    }
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+header .grid{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.grid , #sobgame {
+    padding-bottom: 10px;
+}
+.grid .grid-son ul{
+    list-style: none;
+}
+
+.grid .grid-son li{
+    margin-top: 50px;
+    display: inline-block;
+}
+
+.grid-son a img{
+    margin-top: 20px;
+    width: 100px
+}
+.btn{
+    background-color: var(--Dark-color);
+    color: var(--light-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: 0.3s all;
+    border: none;
+}
+
+.btn:hover{
+    background-color: var(--light-color);
+    color: var(--Dark-color);
+}
+
+
+.especial{
+    background-color: var(--Dark-color);
+    color: var(--light-color);
+    padding: 10px;
+    margin: 10px 10px 40px 10px;
+    line-height: 50px;
+}
+
+.center{
+    text-align: center;
+}
+#sobgame{
+    margin-top: 50px;
+
+    p{
+        font-size: 18px;
+    }
+    .grid{
+        margin-right: 5px;
+        grid-template-columns: 40% 60%;
+    }
+}
+
+.grid-sec{
+    display: inline-block; 
+    img{
+      width: 60%;
+      border: 0.5px solid var(--Dark-color);
+    }
+
+    p{
+        margin-top: 20px;
+    }
+  }
+  
+.play{
+    background-color: #F40100;
+}
+
+.play:hover{
+    color: #F40100;
+    background-color: var(--light-color);
+}
+
+/*------ Página sobre CSS --------*/
+main section{
+    padding: 55px 0;
+}
+.sobre{
+    p{
+        margin: 20px;
+        line-height: 30px;
+    }
+    h1{
+        margin-bottom: 25px;
+    }
+    span{
+        i{
+                margin:10px 5px 0 0;
+         }
+    }
+}
+/*-------Contato CSS-----------*/
+form{
+    display: block;
+    margin-top: 0em;
+}
+
+input,textarea{
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid black;
+    padding: 5px 0;
+    font-size: 18px;
+    color: black;
+    font: var(--font-padrao);
+}
+
+button{
+    font-family: var(--font-padrao);
+}
+
+
+/*----------Galeria pagina CSS-----------*/
+
+    .galeria{
+        display: grid;
+        grid-template-columns:repeat(2,1fr) ;
+        grid-gap:10px;
+        margin: 20px 0;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }        
+/*--------Responsividade---------*/
+
+.header-menu{
+    display: none;
+}
+@media (max-width:480px){
+    header{
+        position: relative;
+        height: auto;
+    }
+    .header-menu{
+        width: 20%;
+        display: block;
+        cursor: pointer;
+        margin: auto;
+        border: 1px solid var(--Dark-color);
+        color: var(--Dark-color);
+        transform: scale(3);
+    }
+    header nav{
+        display:none ;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--light-color);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border: 1px solid var(--Dark-color);
+        box-sizing: border-box;
+        z-index: 1000;
+        a{
+            display: block;
+            margin: 5px 0;
+            padding: 10px;
+        }
+    }
+    header nav.active{
+        display: block;
+    }
+    header nav a{
+        display: block;
+        padding: 15px;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid var(--Dark-color);
+    }
+    header nav a:last-child{
+        border-bottom: none;
+    }
+    .banner{
+        display: block;
+    }
+    .galeria{
+        display: block;
+  
+    
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+    .grid-sec img{
+        display: none;
+    }
+    .grid-sec p{
+        text-align: center;
+    }
+    #sobgame{
+        .grid{
+            display: block;
+        }
+    }
+    .container p, .grid-sec p{
+        text-align: justify;
+        line-height: 30px;
+    }
+    .center{
+        text-align: center;
+    }
+    footer{
+        margin: auto;
+        height: auto;
+    }
+    .center a{
+        display: block;
+        margin-top: 15px;
+    }
+ }
+

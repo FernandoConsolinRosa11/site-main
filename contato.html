@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver for Monsters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="IMG/logomain.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="grid">
+            <div class="grid-son">
+                <a href="index.html"><img src="IMG/logomm.jpg" alt="Logo"></a>
+            </div>
+            <a href="javascript:togglemenu()" title="menu" class="header-menu">
+                <i class='bx bx-menu'></i>
+            </a>
+            <div class="grid-son">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="btn">Home</a></li>
+                        <li><a href="sobre.html" class="btn">Sobre</a></li>
+                        <li><a href="galeria.html" class="btn">Galeria de fotos</a></li>
+                        <li><a href="contato.html" class="btn">Contato</a></li>
+                        <li><a href="jogar.html" class="btn play">Jogar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="sobre" data-aos="zoom-in" data-aos-duration="500">
+            <div class="container">
+                <h1><span class="especial"><i class='bx bxs-envelope'></i>Entre em Contato</span></h1>
+
+                <form method="post" name="formContato" id="form">
+                    <label for="nome">Digite seu nome:</label>
+                    <input type="text" name="nome" id="nome" required>
+                    <br>
+                    <label for="email">Digite seu e-mail:</label>
+                    <input type="text" name="email" id="email" required>
+                    <br>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" rows="10" required></textarea>
+                    <br>
+                    <button type="submit" class="btn play" id="botao"><i class='bx bxl-telegram'></i>Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <br>
+
+        <img src="IMG/logomm.jpg" alt="logofooter">
+            <p class="redes">
+                <a href="https://www.instagram.com/ferconsolin_rosa/?next=%2F" title="Instagram" target="_blank">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </p>
+            
+        <p>Desenvolvido por <a href="https://github.com/FernandoConsolinRosa11" title="GitHub" target="_blank">Fernando Consolin Rosa</a></p>
+    </footer>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        function togglemenu(){
+            $("nav").toggle();
+        }
+
+        document.getElementById('botao').onclick = function(){
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+            let mensagem = document.getElementById('mensagem').value;
+
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if(nome == "" && email == "" && mensagem == ""){
+                alert("Por favor, preencha todos os campos");
+            } else {
+                if(nome == ""){
+                    alert("Informe o nome");
+                }
+
+                if(email == ""){
+                    alert("Informe o email");
+                }else if (!emailRegex.test(email)){
+                    alert("Informe um email válido");
+                }
+
+                if(mensagem == ""){
+                    alert("Escreva uma mensagem");
+                }
+            }
+            //confirmar campos:
+            if(nome !="" && email != "" && emailRegex.test(email) && mensagem != "" ){
+                alert("Sua mensagem foi enviada com sucesso!")
+            }
+        }
+
+    </script>
+</body>
+</html>

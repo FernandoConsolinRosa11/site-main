@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+:root{
+   --darkgray-color: #333;
+   --light-color:#FFFFFF ;
+   --Dark-color:#030303;
+   --red-color:#F40100;
+   
+   --font-padrao:"Aboreto", system-ui;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   background-color: var(--light-color);
+   font-family: var(--font-padrao);
+}
+
+
+header{
+    background-color: var(--light-color);
+    width: 100%;
+    height: 85px;
+    
+    nav{
+        border: 1px solid #000000;
+        text-align: center;
+        text-transform: uppercase;
+        margin-right: 100px;
+    } 
+}
+
+a{
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight:bold ;
+    padding: 5px 10px 5px 10px;
+}
+
+h1{
+    text-align: center;
+}
+main{
+    display: block;
+
+    section{
+        padding: 50px 0;  
+    }
+
+    p{
+        font-weight: bold;
+    }
+}
+
+
+footer{
+    height: 200px;
+    color: white;
+    background-color: var(--Dark-color);
+    text-align: center;
+    p{
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.9em;
+        padding-top: 10px;
+    }
+
+
+    img{
+        min-width: 100px;
+        max-width: 100px;
+        border-radius: 50px;
+    }
+
+    a{
+      text-decoration: underline;
+    }
+    
+   
+}
+.redes{
+    display: block;
+    margin: 5px;
+}
+
+.redes a{
+    transition: 0.3s all;
+}
+
+.redes a:hover{
+    color: rgb(255, 0, 55);
+}
+
+
+
+.sobre{
+    iframe{
+        width: 100%;
+        height: 300px;
+        margin: 50px 0;
+    }
+    p{
+        font-size: 18px;
+     }
+}
+
+.banner{
+    text-align: center;
+    background-size: cover;
+    display: none;
+    img{
+        width: 100%;
+    }
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+header .grid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    text-align: center;
+}
+.grid .grid-son ul{
+    list-style: none;
+}
+
+.grid .grid-son li{
+    margin-top: 50px;
+    display: inline-block;
+}
+
+.grid-son a img{
+    margin-top: 20px;
+    width: 110px
+}
+.btn{
+    background-color: var(--Dark-color);
+    color: var(--light-color);
+    border-radius: 5px;
+    padding: 10px 25px 10px 25px;
+    transition: 0.3s all;
+    border: none;
+}
+
+.btn:hover{
+    background-color: var(--light-color);
+    color: var(--Dark-color);
+}
+
+
+.especial{
+    background-color: var(--Dark-color);
+    color: var(--light-color);
+    padding: 10px;
+    margin: 10px 10px 40px 10px;
+    line-height: 50px;
+}
+
+.center{
+    text-align: center;
+}
+#sobgame{
+    margin-top: 50px;
+
+    p{
+        font-size: 18px;
+    }
+    .grid{
+        margin-right: 5px;
+        grid-template-columns: 40% 60%;
+    }
+}
+
+.grid-sec{
+    display: inline-block; 
+    img{
+      width: 20%;
+    }
+
+    p{
+        margin-top: 20px;
+    }
+  }
+  
+.play{
+    background-color: #F40100;
+}
+
+.play:hover{
+    color: #F40100;
+    background-color: var(--light-color);
+}
+
+/*------ Página sobre CSS --------*/
+main section{
+    padding: 55px 0;
+}
+.sobre{
+    p{
+        margin: 20px;
+        line-height: 30px;
+    }
+    h1{
+        margin-bottom: 25px;
+    }
+    span{
+        i{
+                margin:10px 5px 0 0;
+         }
+    }
+}
+/*-------Contato CSS-----------*/
+form{
+    display: block;
+    margin-top: 0em;
+}
+
+input,textarea{
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid black;
+    padding: 5px 0;
+    font-size: 18px;
+    color: black;
+    font: var(--font-padrao);
+}
+
+button{
+    font-family: var(--font-padrao);
+}
+
+.header-menu{
+    float: right;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin: auto;
+}
+/*----------Galeria pagina CSS-----------*/
+.galeria{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+    grid-gap:10px;
+    margin: 20px 0;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+/*--------Responsividade---------*/
+
+}
+@media (min-width:480px){
+    header{
+        .header-menu{
+            display: none;
+        }
+        nav{
+            display: block;
+            
+            border: 0;
+            ul{
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .banner{
+        display: block;
+    }
+ }
