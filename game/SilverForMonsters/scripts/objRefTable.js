@@ -39,7 +39,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Sprite.Cnds.IsMirrored,
 		C3.Plugins.Sprite.Cnds.OnCollision,
-		C3.Plugins.Keyboard.Cnds.IsKeyDown,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Behaviors.Platform.Acts.SetIgnoreInput,
 		C3.Plugins.System.Acts.Wait,

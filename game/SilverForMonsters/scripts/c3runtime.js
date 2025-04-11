@@ -1353,12 +1353,12 @@ self.C3_ExpressionFuncs = [
 		() => "damage",
 		() => 5,
 		() => "fase2",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
 		() => "auu",
 		() => "Combate Boss",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 50);
+		},
 		() => "end",
 		() => -2,
 		() => "menu",
